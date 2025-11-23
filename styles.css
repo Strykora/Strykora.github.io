@@ -51,11 +51,16 @@ body {
     font-weight: 700;
     margin-bottom: 1rem;
     color: var(--accent-primary);
-    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-hover) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     animation: fadeInDown 0.8s ease-out;
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+    .hero-title {
+        background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-hover) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
 }
 
 .hero-subtitle {
@@ -317,8 +322,7 @@ body {
     *,
     *::before,
     *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+        animation: none !important;
+        transition: none !important;
     }
 }
