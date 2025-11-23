@@ -50,6 +50,7 @@ body {
     font-size: clamp(3rem, 10vw, 6rem);
     font-weight: 700;
     margin-bottom: 1rem;
+    color: var(--accent-primary);
     background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-hover) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
